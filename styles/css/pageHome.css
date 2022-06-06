@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Sarala:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0; }
+  40% {
+    opacity: 0.6; }
+  100% {
+    letter-spacing: normal;
+    opacity: 1; } }
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0; }
+  40% {
+    opacity: 0.6; }
+  100% {
+    letter-spacing: normal;
+    opacity: 1; } }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  scroll-behavior: smooth; }
+
+body {
+  font-size: 100%;
+  background: #fff; }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  padding: 10px;
+  background: #009bba;
+  background: -moz-linear-gradient(90deg, #009bba 0%, #090979 75%, #020024 100%);
+  background: -webkit-linear-gradient(90deg, #009bba 0%, #090979 75%, #020024 100%);
+  background: linear-gradient(90deg, #009bba 0%, #090979 75%, #020024 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009bba",endColorstr="#020024",GradientType=1); }
+  .header .header-image-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    -webkit-animation: focus-in-expand-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms both;
+    animation: focus-in-expand-fwd 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms both; }
+    .header .header-image-name .header-image {
+      height: 65px;
+      z-index: 1; }
+    .header .header-image-name .header-name {
+      font-family: 'Ubuntu', cursive;
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: .8px;
+      color: #FFF2E7;
+      background: #090979;
+      border-radius: 100px;
+      width: 170px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-right: 12px;
+      padding-left: 12px;
+      text-align: right;
+      position: relative;
+      right: 13px; }
+  .header #btn-mobile {
+    display: none;
+    font-size: 20px;
+    color: #fff; }
+  .header #menu {
+    display: flex;
+    flex-direction: row;
+    gap: 32px; }
+  .header .menu-item {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #FFF2E7;
+    transition: 500ms; }
+    .header .menu-item:hover {
+      font-size: 20px;
+      color: #f70000;
+      background: #000;
+      padding: 8px;
+      border-radius: 10px; }
+
+.contents {
+  margin-bottom: 48px; }
+  .contents .container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px; }
+  .contents .h2-title {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 700;
+    font-size: 33px;
+    color: #090979;
+    text-transform: uppercase; }
+    @media screen and (max-width: 800px) {
+      .contents .h2-title {
+        font-size: 5vw; } }
+  .contents .icons-sociais {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 3rem; }
+    .contents .icons-sociais .fa-brands, .contents .icons-sociais .fa-solid {
+      font-size: 40px;
+      color: #e4e4e4; }
+    .contents .icons-sociais .fa-facebook {
+      transition: 1s; }
+      .contents .icons-sociais .fa-facebook:hover {
+        color: #3b5998;
+        top: 14px;
+        transform: scale(1.5); }
+    .contents .icons-sociais .fa-linkedin {
+      transition: 1s; }
+      .contents .icons-sociais .fa-linkedin:hover {
+        color: #0A66C2;
+        top: 14px;
+        transform: scale(1.5); }
+    .contents .icons-sociais .fa-whatsapp-square {
+      transition: 1s; }
+      .contents .icons-sociais .fa-whatsapp-square:hover {
+        color: #34af23;
+        top: 14px;
+        transform: scale(1.5); }
+    .contents .icons-sociais .fa-envelope {
+      transition: 1s; }
+      .contents .icons-sociais .fa-envelope:hover {
+        color: #ff0000;
+        top: 14px;
+        transform: scale(1.5); }
+
+.popup-menu-mobile {
+  display: none; }
+
+.presentation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: url(../../img/background-main.png) center center/cover no-repeat content-box fixed;
+  height: 100vh; }
+  @media screen and (max-width: 800px) {
+    .presentation {
+      background: url(../../img/background-main.png) center no-repeat;
+      height: 100vh; } }
+  .presentation .presentation-icons-sociais {
+    position: relative;
+    right: 440px; }
+    @media screen and (max-width: 800px) {
+      .presentation .presentation-icons-sociais {
+        display: none; } }
+  .presentation .presentation-text {
+    display: flex;
+    flex-direction: column;
+    -webkit-animation: tracking-in-contract 2s cubic-bezier(0.215, 0.61, 0.355, 1) 500ms both;
+    animation: tracking-in-contract 2s cubic-bezier(0.215, 0.61, 0.355, 1) 500ms both; }
+    @media screen and (max-width: 800px) {
+      .presentation .presentation-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center; } }
+    .presentation .presentation-text h2 {
+      font-family: 'Sarala', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      color: #FFF2E7; }
+    .presentation .presentation-text h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 64px;
+      color: #01badf;
+      text-transform: uppercase; }
+    .presentation .presentation-text .last-name {
+      color: #fff; }
+
+.about-developer {
+  background-color: rgba(219, 219, 219, 0.755);
+  height: 55vh; }
+  @media screen and (max-width: 800px) {
+    .about-developer {
+      height: auto;
+      display: flex;
+      flex-direction: column; } }
+  .about-developer .about-developer-description {
+    margin-left: 40px;
+    padding-top: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3; }
+    @media screen and (max-width: 800px) {
+      .about-developer .about-developer-description {
+        margin: 0;
+        font-size: 1em;
+        line-height: 1.6; } }
+
+.skills {
+  background: url(../../img/background-skill.png) center center/cover no-repeat content-box fixed;
+  height: 80vh; }
+  @media screen and (max-width: 800px) {
+    .skills {
+      background: url(../../img/background-skill.png) center no-repeat;
+      height: 70vh; } }
+  .skills .content-skills {
+    justify-content: center;
+    align-items: center; }
+    .skills .content-skills .h2-title {
+      color: #fff;
+      text-align: left; }
+    .skills .content-skills .lines-tools {
+      background: rgba(255, 255, 255, 0.634);
+      border-radius: 25px;
+      width: 430px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px; }
+      @media screen and (max-width: 800px) {
+        .skills .content-skills .lines-tools {
+          width: 93vw;
+          margin-top: 30px; } }
+      .skills .content-skills .lines-tools #l1, .skills .content-skills .lines-tools #l2, .skills .content-skills .lines-tools #l3 {
+        display: flex;
+        flex-direction: row;
+        gap: 50px; }
+      .skills .content-skills .lines-tools .design-boxSkill {
+        margin-bottom: 30px;
+        background: #090979;
+        border-radius: 20px;
+        padding: 15px;
+        width: 90px;
+        height: 95px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        @media screen and (max-width: 800px) {
+          .skills .content-skills .lines-tools .design-boxSkill {
+            width: 80px;
+            height: 85px; } }
+      .skills .content-skills .lines-tools .icons-tools {
+        width: 50px; }
+      .skills .content-skills .lines-tools .icons-tools-text {
+        display: flex;
+        justify-content: center;
+        font-family: 'Sarala', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        color: #fff;
+        text-transform: uppercase; }
+
+.services {
+  gap: 20px; }
+  .services h3 {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #090979;
+    padding-bottom: 25px;
+    text-align: center; }
+    @media screen and (max-width: 800px) {
+      .services h3 {
+        font-size: 4vw; } }
+  .services .services-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .services .services-description h2 {
+      display: flex;
+      flex-direction: row;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 23px;
+      color: red;
+      text-transform: uppercase; }
+      .services .services-description h2 img {
+        height: 40px;
+        margin-right: 12px; }
+      @media screen and (max-width: 800px) {
+        .services .services-description h2 {
+          font-size: 3vw; } }
+    .services .services-description p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      padding-top: 5px; }
+    .services .services-description .services-description-block {
+      width: 39vw;
+      display: flex;
+      flex-direction: column;
+      gap: 32px; }
+
+.formations {
+  background: rgba(219, 219, 219, 0.755);
+  height: 60vh; }
+  @media screen and (max-width: 800px) {
+    .formations {
+      height: auto; } }
+  .formations p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 15px; }
+  .formations .formations-circles {
+    display: flex;
+    flex-direction: row; }
+    @media screen and (max-width: 800px) {
+      .formations .formations-circles {
+        display: flex;
+        flex-direction: column; } }
+    .formations .formations-circles .formations-circle {
+      background: #ba0000;
+      border: #fff solid 3px;
+      border-radius: 100px;
+      width: 1.7vw;
+      height: 3.3vh;
+      position: relative;
+      top: 19px;
+      left: 0; }
+      @media screen and (max-width: 800px) {
+        .formations .formations-circles .formations-circle {
+          width: 4.8vw;
+          height: 3vh;
+          display: none; } }
+    .formations .formations-circles .circle-2 {
+      position: relative;
+      left: 22.7rem; }
+      @media screen and (max-width: 800px) {
+        .formations .formations-circles .circle-2 {
+          position: none; } }
+    .formations .formations-circles .circle-3 {
+      position: relative;
+      left: 45.1rem; }
+      @media screen and (max-width: 800px) {
+        .formations .formations-circles .circle-3 {
+          position: none; } }
+    .formations .formations-circles .circle-4 {
+      position: relative;
+      left: 67.7rem; }
+      @media screen and (max-width: 800px) {
+        .formations .formations-circles .circle-4 {
+          position: none; } }
+  .formations .formations-line {
+    background: #009bba;
+    background: -moz-linear-gradient(90deg, #009bba 0%, #090979 75%, #020024 100%);
+    background: -webkit-linear-gradient(90deg, #009bba 0%, #090979 75%, #020024 100%);
+    background: linear-gradient(90deg, #009bba 0%, #090979 75%, #020024 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009bba",endColorstr="#020024",GradientType=1);
+    border-radius: 10px;
+    width: 90vw;
+    height: 1.8vh; }
+    @media screen and (max-width: 800px) {
+      .formations .formations-line {
+        display: none; } }
+  .formations .list-formation {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 30px; }
+    @media screen and (max-width: 800px) {
+      .formations .list-formation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        margin-top: 30px; } }
+    .formations .list-formation .formation-box-design {
+      width: 58vw; }
+      .formations .list-formation .formation-box-design h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #f70000; }
+      .formations .list-formation .formation-box-design h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        font-style: italic;
+        color: #686868;
+        text-align: left; }
+      .formations .list-formation .formation-box-design p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        padding-top: 10px; }
+
+.contact h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 33px;
+  color: #090979;
+  text-transform: uppercase; }
+.contact h4 {
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  font-style: italic;
+  color: #686868;
+  text-align: left; }
+.contact .contact-information-box h2 {
+  font-family: 'Sarala', sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 1.3;
+  color: #f70000;
+  text-transform: uppercase;
+  text-align: center; }
+  @media screen and (max-width: 800px) {
+    .contact .contact-information-box h2 {
+      font-size: 2.9vw;
+      margin-top: 20px; } }
+.contact .contact-information-box .contact-info-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .contact .contact-information-box .contact-info-icons h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 40px; }
+  .contact .contact-information-box .contact-info-icons h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: justify;
+    color: #000; }
+  .contact .contact-information-box .contact-info-icons .icons-sociais {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    background: #000;
+    width: max-content;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 12px; }
+    .contact .contact-information-box .contact-info-icons .icons-sociais i {
+      font-size: 38px; }
+
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px; }
+  footer h2 {
+    font-family: 'Ubuntu', cursive;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    color: #fff; }
+
+/*# sourceMappingURL=pageHome.css.map */
